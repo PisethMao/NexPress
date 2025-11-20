@@ -1,0 +1,146 @@
+:root {
+  --color--primary: #3b82f6;
+  --color--secondary: #6366f1;
+}
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  z-index: 100;
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color--primary);
+  transition: 0.3s ease;
+}
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color--primary);
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+.navList {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navList li a {
+  text-decoration: none;
+  color: var(--foreground);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.navList li a:hover {
+  color: var(--color--primary);
+  transform: translateY(-2px);
+}
+.loginBtn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--color--primary);
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+.loginBtn:hover {
+  background: var(--color--secondary);
+  transform: translateY(-2px);
+}
+.humburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 200;
+}
+.humburger span {
+  width: 100%;
+  height: 3px;
+  background: #111;
+  transition: 0.35s ease;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+}
+.barTop {
+  top: 0;
+}
+.barMid {
+  top: 10px;
+}
+.barBot {
+  top: 20px;
+}
+.barToOpen {
+  top: 10px;
+  transform: rotate(45deg);
+}
+.barMidOpen {
+  opacity: 0;
+}
+.barBotOpen {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mobileMenu a {
+  text-decoration: none;
+  color: var(--foreground);
+  font-weight: 500;
+  font-size: 18px;
+}
+.mobileOpen {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .navList,
+  .action {
+    display: none;
+  }
+  .humburger {
+    display: block;
+  }
+}

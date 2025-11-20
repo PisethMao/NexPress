@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Noto_Sans_Khmer } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const NotoSansKhmer = Noto_Sans_Khmer({
+  variable: "--font-noto-sans-khmer",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const InterFont = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -65,8 +66,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${NotoSansKhmer.variable} ${InterFont.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
