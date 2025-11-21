@@ -78,14 +78,11 @@
   transform: translateY(-2px);
 }
 .humburger {
-  display: none;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
-  width: 30px;
-  height: 24px;
-  position: relative;
-  z-index: 200;
 }
 .humburger span {
   width: 100%;
@@ -139,8 +136,5 @@
   .navList,
   .action {
     display: none;
-  }
-  .humburger {
-    display: block;
   }
 }

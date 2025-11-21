@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Noto_Sans_Khmer } from "next/font/google";
+import { Inter, Noto_Sans_Khmer } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import { ThemeProvider } from "@/components/theme-provide";
 
 const NotoSansKhmer = Noto_Sans_Khmer({
   variable: "--font-noto-sans-khmer",
@@ -64,12 +65,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.remove("dark"); localStorage.setItem("nexpress-theme", "light");`,
+          }}
+        />
+      </head>
       <body
         className={`${NotoSansKhmer.variable} ${InterFont.variable} antialiased`}
       >
-        <Navbar />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          storageKey="nexpress-theme"
+        >
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
