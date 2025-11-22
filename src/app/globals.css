@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter);
 }
+
+@layer utilities {
+  .bg-linear-to-b {
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  }
+}
