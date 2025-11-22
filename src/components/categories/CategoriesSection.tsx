@@ -1,13 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-const categories = [
-  { name: "Guides", color: "from-blue-400 to-blue-600" },
-  { name: "Design", color: "from-purple-400 to-purple-600" },
-  { name: "Tips", color: "from-pink-400 to-pink-600" },
-  { name: "Development", color: "from-green-400 to-green-600" },
-  { name: "News", color: "from-yellow-400 to-orange-600" },
-  { name: "Inspiration", color: "from-teal-400 to-cyan-600" },
-];
+import { categories } from "@/Data/categoryData";
 export default function CategoriesSection() {
   return (
     <section className="w-full py-16 px-4 md:px-8 relative font-inter">
@@ -33,7 +26,7 @@ export default function CategoriesSection() {
             />
             <h3 className="text-xl font-semibold mb-2">{cat.name}</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-              Browse posts related to {cat.name.toLowerCase()}.
+              {cat.description}
             </p>
           </motion.article>
         ))}

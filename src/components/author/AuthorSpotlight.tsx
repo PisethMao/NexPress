@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { motion } from "framer-motion";
+import { authorData } from "@/Data/authorData";
+import Link from "next/link";
 export default function AuthorSpotlight() {
   return (
     <section
@@ -21,28 +23,27 @@ export default function AuthorSpotlight() {
           className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-lg"
         >
           <img
-            src="/piseth.jpg"
-            alt="Author"
+            src={authorData.avatar}
+            alt={authorData.name}
             className="object-cover w-full h-full"
           />
         </motion.div>
         <div className="flex-1 text-center md:text-left">
           <h2 className="text-2xl md:text-3xl font-semibold mb-2 tracking-tight">
-            Meet the Author
+            {authorData.title}
           </h2>
           <p className="text-base md:text-lg text-black/70 dark:text-white/70 leading-relaxed">
-            I&apos;m Piseth, the creator behind NexPress - a modern platform
-            built to make blogging faster, cleaner, and beautifully designed. I
-            focus on UI/UX, DevOps, frontend development, and building tools
-            that empower creators.
+            {authorData.description}
           </p>
-          <motion.button
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="mt-6 px-6 py-3 bg-linear-to-r from-blue-500 to-indigo-500 rounded-xl text-white font-medium shadow-md hover:shadow-lg transition-all cursor-pointer"
-          >
-            Read More About Me
-          </motion.button>
+          <Link href={authorData.buttonHref}>
+            <motion.button
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              className="mt-6 px-6 py-3 bg-linear-to-r from-blue-500 to-indigo-500 rounded-xl text-white font-medium shadow-md hover:shadow-lg transition-all cursor-pointer"
+            >
+              {authorData.buttonLabel}
+            </motion.button>
+          </Link>
         </div>
       </motion.article>
     </section>
