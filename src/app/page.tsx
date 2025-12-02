@@ -17,7 +17,6 @@ export default function Home() {
       <AuthorSpotlight />
       <NewsletterSection />
       <BlogFeed />
-      <FooterSection />
     </div>
   );
 }

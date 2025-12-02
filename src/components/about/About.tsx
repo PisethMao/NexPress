@@ -4,9 +4,10 @@ import { teams } from "@/Data/teamData";
 
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
+    <section className="bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
+    <div className="min-h-screen flex flex-col">
       <main className="container mx-auto mt-50">
-        <section className="py-14 mb-20 ">
+        <section className="py-14 mb-20">
           <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto gap-12">
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold text-dark mb-6">Our Story</h2>
@@ -93,5 +94,6 @@ export default function About() {
         </section>
       </main>
     </div>
+    </section>
   );
 }

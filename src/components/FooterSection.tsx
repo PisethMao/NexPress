@@ -12,7 +12,7 @@ export default function FooterSection() {
     github: <FaGithub className="w-5 h-5" />,
   };
   return (
-    <footer className="font-inter relative w-full mt-20">
+    <footer className="font-inter relative w-full">
       <div className="absolute inset-0 backdrop-blur-xl bg-white/5 dark:bg-black/20 rounded-none pointer-events-none"></div>
       <div className="absolute -top-0.5 w-full h-0.5 left-0 bg-linear-to-r from-primary/40 via-secondary/40 to-secondary/40 opacity-80"></div>
       <motion.div
