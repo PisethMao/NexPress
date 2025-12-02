@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 export default function Login() {
   return (
     <div>
-      <section className="min-h-screen flex flex-col">
+      <section className="min-h-screen flex flex-col bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
         <div className="flex justify-center items-center grow py-12">
           <div className="border border-gray-300 rounded-3xl p-8 w-full max-w-md shadow-md">
             <h2 className="text-2xl font-bold mb-6 text-blue-600 text-center">Login</h2>

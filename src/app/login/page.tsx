@@ -3,7 +3,7 @@ import FooterSection from "@/components/FooterSection";
 
 export default function page() {
   return (
-    <div>
+    <div className="px-4 md:px-8 lg:px-14">
       <Login/> 
       <FooterSection />
     </div>

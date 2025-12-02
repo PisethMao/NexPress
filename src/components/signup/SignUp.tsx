@@ -3,8 +3,8 @@
 export default function SignUp() {
   return (
     <div>
-      <section className="min-h-screen flex flex-col">
-        <div className="max-w-md w-full mt-40 mx-auto p-8 border border-gray-300 rounded-3xl shadow-md bg-white dark:bg-gray-800">
+      <section className="min-h-screen flex flex-col bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
+        <div className="max-w-md w-full mt-40 mx-auto p-8 border border-gray-300 rounded-3xl shadow-md">
           <h2 className="text-2xl font-bold mb-6 text-blue-600 text-center">Create Your Account</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
