@@ -82,20 +82,6 @@ export default function FooterSection() {
             <p className="text-sm opacity-80">
               {footerData.newsletter.subtitle}
             </p>
-            <div className="flex gap-2 mt-2 w-full max-w-xs justify-center md:justify-start">
-              <input
-                type="email"
-                placeholder={footerData.newsletter.placeholder}
-                className="w-full px-4 py-2 rounded-xl bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 focus:outline-none focus:ring-1 focus:ring-primary"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.93 }}
-                className="px-6 py-2 rounded-xl bg-primary text-white shadow-lg hover:bg-primary/80 cursor-pointer"
-              >
-                {footerData.newsletter.buttonLabel}
-              </motion.button>
-            </div>
           </section>
         </div>
         <div className="w-full h-px bg-white/10 dark:bg-white/5 my-10" />

@@ -3,6 +3,8 @@ import { Inter, Noto_Sans_Khmer } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import { ThemeProvider } from "@/components/theme-provide";
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
+import Error from "@/app/error";
 
 const NotoSansKhmer = Noto_Sans_Khmer({
   variable: "--font-noto-sans-khmer",
@@ -82,8 +84,10 @@ export default function RootLayout({
           enableSystem={false}
           storageKey="nexpress-theme"
         >
-          <Navbar />
-          {children}
+          <ErrorBoundary errorComponent={Error}>
+            <Navbar />
+            {children}
+          </ErrorBoundary>
         </ThemeProvider>
       </body>
     </html>
