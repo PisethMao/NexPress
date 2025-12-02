@@ -3,13 +3,14 @@ import Link from "next/link";
 import styles from "./style.module.css";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { BookOpen, Home, Info, Layers, Menu, X } from "lucide-react";
+import { BookOpen, Info, Layers, Menu, X } from "lucide-react";
 import ThemeToggle from "../theme/ThemeToggle";
 import { navItem } from "@/Data/navItemData";
+import { BiComment } from "react-icons/bi";
 const iconMap: Record<string, React.ReactNode> = {
-  Home: <Home size={18} />,
   Blogs: <BookOpen size={18} />,
   Categories: <Layers size={18} />,
+  Comments: <BiComment size={18} />,
   About: <Info size={18} />,
 };
 export default function Navbar() {
