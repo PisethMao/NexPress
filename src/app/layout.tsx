@@ -5,6 +5,9 @@ import Navbar from "@/components/navbar/Navbar";
 import { ThemeProvider } from "@/components/theme-provide";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 import Error from "@/app/error";
+import FooterSection from "@/components/FooterSection";
+import { Suspense } from "react";
+import LoadingPage from "./loading";
 
 const NotoSansKhmer = Noto_Sans_Khmer({
   variable: "--font-noto-sans-khmer",
@@ -86,7 +89,8 @@ export default function RootLayout({
         >
           <ErrorBoundary errorComponent={Error}>
             <Navbar />
-            {children}
+            <Suspense fallback={<LoadingPage />}>{children}</Suspense>
+            <FooterSection />
           </ErrorBoundary>
         </ThemeProvider>
       </body>
